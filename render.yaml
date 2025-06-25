@@ -1,7 +1,11 @@
 services:
   - type: web
-    name: coin-model-api
+    name: coin_regression
     env: python
+    plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
-    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+
